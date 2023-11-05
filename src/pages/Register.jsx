@@ -29,6 +29,11 @@ const Register = () => {
         "Your password should have at least one upper case characters."
       );
       return;
+    } else if (!/[0-9]/.test(password)) {
+      setRegisterError(
+        "Your password should have at least one numeric character."
+      );
+      return;
     } else if (!/[!@#$%^&*()_+{}/:;<>,.?~|-]/.test(password)) {
       setRegisterError("Your password should have a special character");
       return;
@@ -41,18 +46,15 @@ const Register = () => {
           e.target.reset();
           naviGate("/");
         });
-        const newUser = { email };
+        const newUserBlog = { email };
         //  send data to the server:
-        fetch(
-          "http://localhost:5000/user",
-          {
-            method: "POST",
-            headers: {
-              "content-type": "application/json",
-            },
-            body: JSON.stringify(newUser),
-          }
-        )
+        fetch("http://localhost:5000/userBlog", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newUserBlog),
+        })
           .then((res) => res.json())
           .then((data) => {
             console.log(data);

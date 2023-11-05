@@ -5,21 +5,31 @@ const AddBlog = () => {
   const handleAddProduct = (event) => {
     event.preventDefault();
     const form = event.target;
-    const name = form.name.value;
-    const brand = form.brand.value;
-    const type = form.type.value;
-    const price = form.price.value;
-    const description = form.description.value;
-    const rating = form.rating.value;
-    const photo = form.photo.value;
+    const category = form.category.value;
+    const title = form.title.value;
+    const shortDescription = form.shortDescription.value;
+    const longDescription = form.longDescription.value;
+    const imageUrl = form.imageUrl.value;
+    const dateTime = new Date();
+    const options = {
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+      hour: 'numeric',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true, 
+      timeZoneName: 'short',
+    };
+    const currentTime = dateTime.toLocaleString("en-Us", options)
+
     const newAddBlog = {
-      name,
-      brand,
-      type,
-      price,
-      description,
-      rating,
-      photo,
+      category,
+      title,
+      shortDescription,
+      longDescription,
+      imageUrl,
+      currentTime,
     };
     console.log(newAddBlog);
 
@@ -49,94 +59,34 @@ const AddBlog = () => {
   return (
     <>
       <div className="bg-[#F4F3F0] p-24 my-12">
-        <h2 className="text-center text-6xl font-bold mb-10">Add Product</h2>
+        <h2 className="text-center text-6xl font-bold mb-10">Add Blog</h2>
         <form onSubmit={handleAddProduct}>
           <div className="flex gap-6">
             <div className="form-control w-1/2">
               <label className="label">
-                <span className="label-text text-xl font-semibold">Name</span>
-              </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  required
-                  className="input input-bordered w-full"
-                />
-              </label>
-            </div>
-            <div className="form-control w-1/2">
-              <label className="label">
-                <span className="label-text text-xl font-semibold">Brand</span>
-              </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="brand"
-                  placeholder="Brand"
-                  required
-                  className="input input-bordered w-full"
-                />
-              </label>
-            </div>
-          </div>
-          <div className="flex gap-6">
-            <div className="form-control w-1/2">
-              <label className="label">
-                <span className="label-text text-xl font-semibold">Type</span>
-              </label>
-              <label className="input-group">
-                <input
-                  type="text"
-                  name="type"
-                  placeholder="Type"
-                  required
-                  className="input input-bordered w-full"
-                />
-              </label>
-            </div>
-            <div className="form-control w-1/2">
-              <label className="label">
-                <span className="label-text text-xl font-semibold"> Price</span>
-              </label>
-              <label className="input-group">
-                <input
-                  type="number"
-                  name="price"
-                  placeholder="Price"
-                  required
-                  className="input input-bordered w-full"
-                />
-              </label>
-            </div>
-          </div>
-          <div className="flex gap-6">
-            <div className="form-control w-1/2">
-              <label className="label">
                 <span className="label-text text-xl font-semibold">
-                  Description
+                  Category
                 </span>
               </label>
               <label className="input-group">
                 <input
                   type="text"
-                  name="description"
+                  name="category"
+                  placeholder="Category"
                   required
-                  placeholder="Short Description"
                   className="input input-bordered w-full"
                 />
               </label>
             </div>
             <div className="form-control w-1/2">
               <label className="label">
-                <span className="label-text text-xl font-semibold">Rating</span>
+                <span className="label-text text-xl font-semibold">Title</span>
               </label>
               <label className="input-group">
                 <input
-                  type="number"
-                  name="rating"
-                  placeholder="Rating"
+                  type="text"
+                  name="title"
+                  placeholder="Title"
                   required
                   className="input input-bordered w-full"
                 />
@@ -145,21 +95,55 @@ const AddBlog = () => {
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text text-xl font-semibold">Photo</span>
+              <span className="label-text text-xl font-semibold">
+                Short Description
+              </span>
             </label>
             <label className="input-group">
               <input
                 type="text"
-                name="photo"
+                name="shortDescription"
+                placeholder="Short Description"
                 required
-                placeholder="Photo URL"
+                className="input input-bordered w-full"
+              />
+            </label>
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text text-xl font-semibold">
+                Long Description
+              </span>
+            </label>
+            <label className="input-group">
+              <input
+                type="text"
+                name="longDescription"
+                placeholder="Long Description"
+                required
+                className="input input-bordered w-full"
+              />
+            </label>
+          </div>
+          <div className="form-control">
+            <label className="label">
+              <span className="label-text text-xl font-semibold">
+                Image Url
+              </span>
+            </label>
+            <label className="input-group">
+              <input
+                type="text"
+                name="imageUrl"
+                required
+                placeholder="Image Url"
                 className="input input-bordered w-full"
               />
             </label>
           </div>
           <input
             type="submit"
-            value="Add Product"
+            value="Add Blog"
             className="btn btn-block text-white bg-black mt-8"
           />
         </form>
