@@ -8,6 +8,7 @@ import AddBlog from "../pages/PageInNavbar/AddBlog";
 import RecentBlogs from "../components/Home/RecentBlogs";
 import BlogsDetails from "../pages/PageInNavbar/BlogsDetails";
 import WishList from "../pages/PageInNavbar/WishList";
+import AllBlogs from "../pages/PageInNavbar/AllBlogs";
 // import UpdateProduct from "../components/UpdateProduct";
 // import MyCart from "../components/MyCart";
 // import BrandCards from "../components/BrandCards";
@@ -25,6 +26,11 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: <RecentBlogs></RecentBlogs>,
+        loader: () => fetch("http://localhost:5000/addBlog"),
+      },
+      {
+        path: "/allBlogs",
+        element: <AllBlogs></AllBlogs>,
         loader: () => fetch("http://localhost:5000/addBlog"),
       },
       {
