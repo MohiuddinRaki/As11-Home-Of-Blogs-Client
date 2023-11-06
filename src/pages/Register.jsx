@@ -40,7 +40,8 @@ const Register = () => {
     }
 
     creatUser(email, password)
-      .then(() => {
+      .then((res) => {
+        console.log(res.user)
         handleUpdateProfile(name, photo).then(() => {
           toast.success("User logged in successfully");
           e.target.reset();

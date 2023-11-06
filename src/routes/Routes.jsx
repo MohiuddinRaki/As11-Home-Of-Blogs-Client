@@ -9,6 +9,7 @@ import RecentBlogs from "../components/Home/RecentBlogs";
 import BlogsDetails from "../pages/PageInNavbar/BlogsDetails";
 import WishList from "../pages/PageInNavbar/WishList";
 import AllBlogs from "../pages/PageInNavbar/AllBlogs";
+// import CommentsSection from "../pages/CommentsSection";
 // import UpdateProduct from "../components/UpdateProduct";
 // import MyCart from "../components/MyCart";
 // import BrandCards from "../components/BrandCards";
@@ -43,6 +44,10 @@ const Routes = createBrowserRouter([
           </PrivateRoute>
         ),
       },
+      // {
+      //   element: <CommentsSection></CommentsSection>,
+      //   loader: () => fetch("http://localhost:5000/userComments"),
+      // },
 
       {
         path: "/addBlog",
