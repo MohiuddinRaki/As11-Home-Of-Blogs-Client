@@ -5,6 +5,9 @@ import Login from "../pages/Login";
 import Root from "../components/Root";
 import PrivateRoute from "./PrivateRoute";
 import AddBlog from "../pages/PageInNavbar/AddBlog";
+import RecentBlogs from "../components/Home/RecentBlogs";
+import BlogsDetails from "../pages/PageInNavbar/BlogsDetails";
+import WishList from "../pages/PageInNavbar/WishList";
 // import UpdateProduct from "../components/UpdateProduct";
 // import MyCart from "../components/MyCart";
 // import BrandCards from "../components/BrandCards";
@@ -19,42 +22,22 @@ const Routes = createBrowserRouter([
     element: <Root></Root>,
     errorElement: <ErrorPage></ErrorPage>,
     children: [
-      //   {
-      //     path: "/",
-      //     element: <BrandCards></BrandCards>,
-      //     loader: () =>
-      //       fetch(
-      //         "https://b8a10-brandshop-server-side-mohiuddin-raki-6bicgiy8b.vercel.app/brandu"
-      //       ),
-      //   },
-      //   {
-      //     path: "/",
-      //     element: <Team></Team>,
-      //   },
-      //   {
-      //     path: "/brandPro/:brand",
-      //     loader: () =>
-      //       fetch(
-      //         "https://b8a10-brandshop-server-side-mohiuddin-raki-6bicgiy8b.vercel.app/product"
-      //       ),
-      //     element: (
-      //       <PrivateRoute>
-      //         <BrandProducts></BrandProducts>
-      //       </PrivateRoute>
-      //     ),
-      //   },
-      //   {
-      //     path: "/brand/:_id",
-      //     loader: () =>
-      //       fetch(
-      //         "https://b8a10-brandshop-server-side-mohiuddin-raki-6bicgiy8b.vercel.app/product"
-      //       ),
-      //     element: (
-      //       <PrivateRoute>
-      //         <ProductsDetails></ProductsDetails>
-      //       </PrivateRoute>
-      //     ),
-      //   },
+      {
+        path: "/",
+        element: <RecentBlogs></RecentBlogs>,
+        loader: () => fetch("http://localhost:5000/addBlog"),
+      },
+      {
+        path: "/blogDetails/:_id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/addBlog/${params._id}`),
+        element: (
+          <PrivateRoute>
+            <BlogsDetails></BlogsDetails>
+          </PrivateRoute>
+        ),
+      },
+
       {
         path: "/addBlog",
         element: (
@@ -64,30 +47,15 @@ const Routes = createBrowserRouter([
         ),
       },
 
-      //   {
-      //     path: "/brandUnic",
-      //     element: <BrandUnic></BrandUnic>,
-      //   },
-      //   {
-      //     path: "/updateProduct/:_id",
-      //     element: <UpdateProduct></UpdateProduct>,
-      //     loader: () =>
-      //       fetch(
-      //         "https://b8a10-brandshop-server-side-mohiuddin-raki-6bicgiy8b.vercel.app/product"
-      //       ),
-      //   },
-      //   {
-      //     path: "/cart/:email",
-      //     loader: () =>
-      //       fetch(
-      //         "https://b8a10-brandshop-server-side-mohiuddin-raki-6bicgiy8b.vercel.app/cart"
-      //       ),
-      //     element: (
-      //       <PrivateRoute>
-      //         <MyCart></MyCart>
-      //       </PrivateRoute>
-      //     ),
-      //   },
+      {
+        path: "/wishlist/:email",
+        loader: () => fetch("http://localhost:5000/wishlist"),
+        element: (
+          <PrivateRoute>
+            <WishList></WishList>
+          </PrivateRoute>
+        ),
+      },
       {
         path: "register",
         element: <Register></Register>,

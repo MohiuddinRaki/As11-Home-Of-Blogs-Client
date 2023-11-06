@@ -16,13 +16,6 @@ const Navbar = () => {
       <li className="text-lg font-medium text-white">
         <NavLink to="/addBlog">Add Blog</NavLink>
       </li>
-      {/* <li className="text-lg font-medium text-white">
-        {user?.email ? (
-          <NavLink to={`/cart/${user.email}`}>My Cart</NavLink>
-        ) : (
-          <NavLink to="/cart/email">My Cart</NavLink>
-        )}
-      </li> */}
       <li className="text-lg font-medium text-white">
         <NavLink to="/allBlogs">All Blogs</NavLink>
       </li>
@@ -30,7 +23,7 @@ const Navbar = () => {
         <NavLink to="/featuredBlogs">Featured Blogs</NavLink>
       </li>
       <li className="text-lg font-medium text-white">
-        <NavLink to="/wishlist">Wishlist</NavLink>
+        <NavLink to={`/wishlist/${user?.email}`}>Wishlist</NavLink>
       </li>
       <li className="text-lg font-medium text-white">
         <NavLink to="/login">Login</NavLink>

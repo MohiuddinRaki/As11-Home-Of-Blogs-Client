@@ -2,7 +2,7 @@ import Swal from "sweetalert2";
 import Footer from "../Footer";
 
 const AddBlog = () => {
-  const handleAddProduct = (event) => {
+  const handleAddBlog = (event) => {
     event.preventDefault();
     const form = event.target;
     const category = form.category.value;
@@ -12,16 +12,16 @@ const AddBlog = () => {
     const imageUrl = form.imageUrl.value;
     const dateTime = new Date();
     const options = {
-      year: 'numeric',
-      month: 'numeric',
-      day: 'numeric',
-      hour: 'numeric',
-      minute: '2-digit',
-      second: '2-digit',
-      hour12: true, 
-      timeZoneName: 'short',
+      year: "numeric",
+      month: "numeric",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      second: "2-digit",
+      hour12: true,
+      timeZoneName: "short",
     };
-    const currentTime = dateTime.toLocaleString("en-Us", options)
+    const currentTime = dateTime.toLocaleString("en-Us", options);
 
     const newAddBlog = {
       category,
@@ -60,7 +60,7 @@ const AddBlog = () => {
     <>
       <div className="bg-[#F4F3F0] p-24 my-12">
         <h2 className="text-center text-6xl font-bold mb-10">Add Blog</h2>
-        <form onSubmit={handleAddProduct}>
+        <form onSubmit={handleAddBlog}>
           <div className="flex gap-6">
             <div className="form-control w-1/2">
               <label className="label">
