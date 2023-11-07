@@ -79,15 +79,67 @@ const UpdateBlog = () => {
                 </span>
               </label>
               <label className="input-group">
-                <input
+                {/* <input
                   type="text"
                   name="category"
                   placeholder="Category"
                   defaultValue={blogs.category}
                   required
                   className="input input-bordered w-full"
-                />
+                /> */}
+                <select
+                  type="text"
+                  name="category"
+                  placeholder="Category"
+                  defaultValue={blogs.category}
+                  required
+                  className="input input-bordered w-full"
+                >
+                  <option value="Technology">Technology</option>
+                  <option value="Travel">Travel</option>
+                  <option value="Health & Wellness">Health & Wellness</option>
+                  <option value="Food & Cooking">Food & Cooking</option>
+                  <option value="Finance">Finance</option>
+                  <option value="Fitness">Fitness</option>
+                  <option value="Sports and Recreatio">
+                    Sports and Recreatio
+                  </option>
+                  <option value="Science and Technology">
+                    Science and Technology
+                  </option>
+                  <option value="Gardening and Landscaping">
+                    Gardening and Landscaping
+                  </option>
+                  <option value="Pet Care and Tips">Pet Care and Tips</option>
+                  <option value="Art and Creativity">Art and Creativity</option>
+                  <option value="Environmental Sustainability">
+                    Environmental Sustainability
+                  </option>
+                  <option value="Career Development">Career Development</option>
+                  <option value="Movie and Entertainment">
+                    Movie and Entertainment
+                  </option>
+                  <option value="Book Reviews">Book Reviews</option>
+                  <option value="Outdoor Adventures">Outdoor Adventures</option>
+                  <option value="Parenting Tips">Parenting Tips</option>
+                  <option value="Home Decor & DIY">Home Decor & DIY</option>
+                  <option value="Fashion Forward">Fashion Forward</option>
+                  <option value="Lifestyle Hacks">Lifestyle Hacks</option>
+                </select>
               </label>
+              {/* <select
+                type="text"
+                name="category"
+                placeholder="Category"
+                defaultValue={blogs.category}
+                required
+                className="input input-bordered w-full"
+              >
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+              </select> */}
             </div>
             <div className="form-control w-1/2">
               <label className="label">
