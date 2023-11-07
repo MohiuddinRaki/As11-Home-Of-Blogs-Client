@@ -42,8 +42,8 @@ const Navbar = () => {
             <label tabIndex={0} className="btn btn-ghost btn-circle">
               <div className="items-center mr-2">
                 <img
-                  className="rounded-full"
-                  src="https://i.ibb.co/2hXPm1h/e6c16c6fdc213eae670cae97c487582ad720f85e-351x351.png"
+                  className="rounded-full max-w-16 h-10"
+                  src="https://i.ibb.co/rd5gtSL/blog-world-d-illustration-31262699.webp"
                 />
               </div>
             </label>
@@ -54,9 +54,13 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-teal-500 font-bold text-4xl pl-12 md:pl-44 lg:pl-0">
-            King Of Tech
-          </a>
+
+          <Link
+            to="/"
+            className="btn btn-ghost normal-case text-teal-500 font-bold text-4xl pl-12 md:pl-44 lg:pl-0"
+          >
+            Home Of Blogs
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu-horizontal px-1 gap-5">{navLinks}</ul>

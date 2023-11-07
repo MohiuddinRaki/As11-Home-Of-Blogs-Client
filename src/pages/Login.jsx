@@ -25,8 +25,9 @@ const Login = () => {
         naviGate(location?.state ? location.state : "/");
         console.log(res.user);
       })
-      .catch(() => {
+      .catch((error) => {
         setLoginError("password or email doesn't match");
+        toast.error(error.message);
       });
   };
 
