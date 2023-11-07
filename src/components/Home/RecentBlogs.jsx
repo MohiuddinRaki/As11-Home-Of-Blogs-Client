@@ -6,6 +6,8 @@ import RecentBlog from "./RecentBlog";
 import Footer from "../../pages/Footer";
 import NewsLetterSection from "./NewsLetterSection";
 import Banner from "./Banner";
+import GoogleMap from "./GoogleMap";
+import UsersFeedBack from "./UsersFeedBack";
 // import GoogleMap from "./GoogleMap";
 // import Team from "./Team";
 
@@ -29,6 +31,8 @@ const RecentBlogs = () => {
       <Team></Team>
       <GoogleMap></GoogleMap> */}
       <NewsLetterSection></NewsLetterSection>
+      <UsersFeedBack></UsersFeedBack>
+      <GoogleMap></GoogleMap>
       <Footer></Footer>
     </div>
   );

@@ -1,15 +1,8 @@
-// import { useLoaderData, useParams } from "react-router-dom";
-// import Swal from "sweetalert2";
-// import Aos from "aos";
-// import "aos/dist/aos.css";
-// import { useContext, useEffect } from "react";
-// import { AuthContext } from "../providers/AuthProvider";
-
 import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
-// import CommentsSection from "../CommentsSection";
+
 import CommentSection from "../CommentSection";
 
 const BlogsDetails = () => {
@@ -25,23 +18,6 @@ const BlogsDetails = () => {
     userEmail,
   } = blogs;
 
-  // const [comments, setComments] = useState([]);
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/userComments")
-  //     .then((response) => response.json())
-  //     .then((result) => {
-  //       setComments(result);
-  //     })
-  //     .catch((error) => {
-  //       console.error("Error fetching data:", error);
-  //     });
-  // }, []);
-  // const specifyblogsComments = comments.filter(
-  //   (comment) => comment._id === blogs._id
-  // );
-  // if(user.email === userEmail){
-  //  ('Can not comment on own blog')
-  // }
   const handleAddComments = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -96,45 +72,6 @@ const BlogsDetails = () => {
       });
   };
 
-  //   const { user } = useContext(AuthContext);
-  //   const email = user.email;
-  //   const { category, image  } = useParams();
-  //   const product = products.find((product) => product._id === _id);
-
-  //   const handleAddCart = (product) => {
-  //     const photo = product.photo;
-  //     const name = product.name;
-  //     const description = product.description;
-  //     const newCart = { photo, name, description, email };
-
-  //     //  send data to the server:
-  //     fetch(
-  //       `http://localhost:5000/addBlog/${_id}`,
-  //       {
-  //         method: "POST",
-  //         headers: {
-  //           "content-type": "application/json",
-  //         },
-  //         body: JSON.stringify(newCart),
-  //       }
-  //     )
-  //       .then((res) => res.json())
-  //       .then((data) => {
-  //         console.log(data);
-  //         if (data.insertedId) {
-  //           Swal.fire({
-  //             title: "Success!",
-  //             text: "Product Added to Cart Successfully",
-  //             icon: "success",
-  //             confirmButtonText: "Cool",
-  //           });
-  //         }
-  //       });
-  //   };
-
-  //   useEffect(() => {
-  //     Aos.init();
-  //   }, []);
   const [comments, setComments] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/userComments")
@@ -180,14 +117,13 @@ const BlogsDetails = () => {
                 Can not comment on own blog
               </h2>
               <Link to={`/updateBlog/${_id}`}>
-              <button className="btn bg-lime-500 w-full">Update</button>
-            </Link>
+                <button className="btn bg-lime-500 w-full">Update</button>
+              </Link>
             </div>
           ) : (
             <div>
               <div className="text-center">
                 <textarea
-                  // value={text}
                   className="bg-base-300 px-5 py-3 rounded-full w-full"
                   type="text"
                   rows="1"
