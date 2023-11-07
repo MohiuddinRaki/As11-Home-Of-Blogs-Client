@@ -1,0 +1,94 @@
+[
+    {
+      "category": "Technology",
+      "title": "The Future of Artificial Intelligence",
+      "shortDescription": "Explore the evolving landscape of AI and its impact on various industries.",
+      "longDescription": "Artificial Intelligence is at the forefront of technological advancements, transforming industries and our daily lives. This blog delves into the latest developments, potential applications, and ethical considerations surrounding AI, showcasing its promising future.",
+      "imageUrl": "https://i.ibb.co/6yG2tMr/Technology-Blogs.webp",
+      "currentTime": "11/5/2023, 8:34:23 PM GMT+6",
+      "userEmail": "mohammadmohiuddinn3490@gmail.com"
+    },
+    {
+      "category": "Travel",
+      "title": "A Guide to Exotic Destinations",
+      "shortDescription": "Discover hidden gems and must-visit places for your next adventure.",
+      "longDescription": "Embark on a journey to the world's most exotic destinations. From serene beaches to bustling bazaars, this guide provides an in-depth look at unique travel spots, offering tips, breathtaking photos, and cultural insights to make your travels unforgettable.",
+      "imageUrl": "https://i.ibb.co/zFtD71j/travel-blog-names.jpg",
+      "currentTime": "11/5/2023, 8:37:59 PM GMT+6",
+      "userEmail": "mohammadmohiuddinn3490@gmail.com"
+    },
+    {
+      "category": "Health & Wellness",
+      "title": "The Benefits of Yoga and Meditation",
+      "shortDescription": "Learn how yoga and meditation can improve your physical and mental well-being.",
+      "longDescription": "Find inner peace and enhance your overall health with yoga and meditation. This article explores the science-backed benefits of these practices, from stress reduction to increased flexibility, empowering you to start your wellness journey.",
+      "imageUrl": "https://i.ibb.co/D4RXnqR/6-Best-Wix-Templates-For-Health-and-Wellness-Websites-image1.jpg",
+      "currentTime": "11/5/2023, 8:45:39 PM GMT+6",
+      "userEmail": "mohammadmohiuddinn3490@gmail.com"
+    },
+    {
+      "category": "Food & Cooking",
+      "title": "Gourmet Delights: Mastering Culinary Art",
+      "shortDescription": "Elevate your cooking skills with these gourmet recipes and cooking tips.",
+      "longDescription": "Unlock the secrets of gourmet cooking with expert insights and delectable recipes. From mouthwatering dishes to advanced techniques, this blog equips you with the knowledge and inspiration to create restaurant-quality meals at home.",
+      "imageUrl": "https://i.ibb.co/VvcTwmZ/Food-Blogs-1.jpg",
+      "currentTime": "11/5/2023, 8:57:47 PM GMT+6",
+      "userEmail": "mohammadmohiuddinn3490@gmail.com"
+    },
+    {
+      "category": "Finance",
+      "title": "Investment Strategies for Beginners",
+      "shortDescription": "Begin your financial journey with these investment tips and strategies.",
+      "longDescription": "Begin your financial journey with these investment tips and strategies.Dive into the world of investments with this comprehensive guide. Designed for beginners, it covers investment basics, risk management, and various investment vehicles, ensuring you make informed decisions to secure your financial future",
+      "imageUrl": "https://i.ibb.co/Csy0WBz/1605011572-image25.jpg",
+      "currentTime": "11/5/2023, 9:07:51 PM GMT+6",
+      "userEmail": "rakibhasann3490@gmail.com"
+    },
+    {
+      "category": "Fitness",
+      "title": "Effective Workout Routines for Busy Professionals",
+      "shortDescription": "Stay fit and healthy with efficient workout plans tailored for your busy schedule.",
+      "longDescription": "Maintaining a fit and active lifestyle can be challenging for busy professionals. This blog offers time-efficient workout routines, nutritional advice, and motivational tips to help you stay in shape and prioritize your health amid your busy work schedule.",
+      "imageUrl": "https://i.ibb.co/JxQbrf4/Fitness-Blogs.jpg",
+      "currentTime": "11/5/2023, 9:13:18 PM GMT+6",
+      "userEmail": "rakibhasann3490@gmail.com"
+    },
+
+    {
+      "category": "Food",
+      "title": "Vegetarian Cooking Guide",
+      "shortDescription": "Cook healthy and delicious vegetarian meals.",
+      "longDescription": "Discover vegetarian recipes from around the world and enjoy flavorful dishes.",
+      "imageUrl": "https://example.com/vegetarian-image.jpg",
+      "currentTime": "2023-11-08T14:00:00Z",
+      "userEmail": "user7@example.com"
+    },
+    {
+      "category": "Fitness",
+      "title": "Yoga for Stress Relief",
+      "shortDescription": "Relax and unwind with soothing yoga practices.",
+      "longDescription": "Learn yoga poses and techniques to reduce stress and improve well-being.",
+      "imageUrl": "https://example.com/yoga-image.jpg",
+      "currentTime": "2023-11-08T16:10:00Z",
+      "userEmail": "user8@example.com"
+    },
+    {
+      "category": "Technology",
+      "title": "Mastering Mobile App Development",
+      "shortDescription": "Become a pro in creating mobile apps.",
+      "longDescription": "Learn mobile app development with the latest tools and technologies.",
+      "imageUrl": "https://example.com/mobile-app-image.jpg",
+      "currentTime": "2023-11-09T08:45:00Z",
+      "userEmail": "user9@example.com"
+    },
+    {
+      "category": "Travel",
+      "title": "Hidden Gems of Asia",
+      "shortDescription": "Uncover the best-kept secrets of Asia's travel destinations.",
+      "longDescription": "Explore off-the-beaten-path places and unique cultural experiences.",
+      "imageUrl": "https://example.com/asia-travel-image.jpg",
+      "currentTime": "2023-11-09T10:55:00Z",
+      "userEmail": "user10@example.com"
+    }
+  ]
+  

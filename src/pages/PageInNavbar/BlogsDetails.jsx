@@ -15,8 +15,15 @@ import CommentSection from "../CommentSection";
 const BlogsDetails = () => {
   const blogs = useLoaderData();
   const { user } = useContext(AuthContext);
-  const { _id, title, shortDescription, longDescription, category, imageUrl } =
-    blogs;
+  const {
+    _id,
+    title,
+    shortDescription,
+    longDescription,
+    category,
+    imageUrl,
+    userEmail,
+  } = blogs;
 
   // const [comments, setComments] = useState([]);
   // useEffect(() => {
@@ -32,7 +39,9 @@ const BlogsDetails = () => {
   // const specifyblogsComments = comments.filter(
   //   (comment) => comment._id === blogs._id
   // );
-
+  // if(user.email === userEmail){
+  //  ('Can not comment on own blog')
+  // }
   const handleAddComments = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -165,23 +174,29 @@ const BlogsDetails = () => {
               ></CommentSection>
             ))}
           </div>
-          <div className="text-center">
-            <textarea
-              // value={text}
-              className="bg-base-300 px-5 py-3 rounded-full w-full"
-              type="text"
-              rows="1"
-              cols="80"
-              name="comments"
-              required
-              placeholder="Write Your Comments"
-            ></textarea>
-          </div>
-          <input
-            type="submit"
-            value="Post"
-            className="btn btn-block bg-lime-500"
-          />
+          {user?.email === userEmail ? (
+            <div className="text-center text-5xl font-bold text-red-500">Can not comment on own blog</div>
+          ) : (
+            <div>
+              <div className="text-center">
+                <textarea
+                  // value={text}
+                  className="bg-base-300 px-5 py-3 rounded-full w-full"
+                  type="text"
+                  rows="1"
+                  cols="80"
+                  name="comments"
+                  required
+                  placeholder="Write Your Comments"
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                value="Post"
+                className="btn btn-block bg-lime-500"
+              />
+            </div>
+          )}
         </form>
       </div>
     </>

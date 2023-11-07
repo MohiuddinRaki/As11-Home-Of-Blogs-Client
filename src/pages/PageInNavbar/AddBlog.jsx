@@ -1,7 +1,10 @@
 import Swal from "sweetalert2";
 import Footer from "../Footer";
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const AddBlog = () => {
+  const { user } = useContext(AuthContext);
   const handleAddBlog = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -10,6 +13,7 @@ const AddBlog = () => {
     const shortDescription = form.shortDescription.value;
     const longDescription = form.longDescription.value;
     const imageUrl = form.imageUrl.value;
+    const userEmail = user.email;
     const dateTime = new Date();
     const options = {
       year: "numeric",
@@ -29,6 +33,7 @@ const AddBlog = () => {
       shortDescription,
       longDescription,
       imageUrl,
+      userEmail,
       currentTime,
     };
     console.log(newAddBlog);
