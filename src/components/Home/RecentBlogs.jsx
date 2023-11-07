@@ -5,6 +5,7 @@ import { useLoaderData } from "react-router-dom";
 import RecentBlog from "./RecentBlog";
 import Footer from "../../pages/Footer";
 import NewsLetterSection from "./NewsLetterSection";
+import FeaturesBlogs from "../../pages/PageInNavbar/FeaturesBlogs";
 // import GoogleMap from "./GoogleMap";
 // import Team from "./Team";
 
@@ -28,6 +29,7 @@ const RecentBlogs = () => {
       <Team></Team>
       <GoogleMap></GoogleMap> */}
       <NewsLetterSection></NewsLetterSection>
+      <FeaturesBlogs></FeaturesBlogs>
       <Footer></Footer>
     </div>
   );

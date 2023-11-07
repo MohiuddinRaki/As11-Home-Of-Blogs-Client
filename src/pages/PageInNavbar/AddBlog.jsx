@@ -13,7 +13,9 @@ const AddBlog = () => {
     const shortDescription = form.shortDescription.value;
     const longDescription = form.longDescription.value;
     const imageUrl = form.imageUrl.value;
-    const userEmail = user.email;
+    const userEmail = user?.email;
+    const userName = user?.displayName;
+    const userPhoto = user?.photoURL;
     const dateTime = new Date();
     const options = {
       year: "numeric",
@@ -34,6 +36,8 @@ const AddBlog = () => {
       longDescription,
       imageUrl,
       userEmail,
+      userName,
+      userPhoto,
       currentTime,
     };
     console.log(newAddBlog);
