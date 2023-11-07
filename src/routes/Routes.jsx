@@ -9,6 +9,7 @@ import RecentBlogs from "../components/Home/RecentBlogs";
 import BlogsDetails from "../pages/PageInNavbar/BlogsDetails";
 import WishList from "../pages/PageInNavbar/WishList";
 import AllBlogs from "../pages/PageInNavbar/AllBlogs";
+import UpdateBlog from "../pages/UpdateBlog";
 // import CommentsSection from "../pages/CommentsSection";
 // import UpdateProduct from "../components/UpdateProduct";
 // import MyCart from "../components/MyCart";
@@ -43,6 +44,11 @@ const Routes = createBrowserRouter([
             <BlogsDetails></BlogsDetails>
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/updateBlog/:_id",
+        element: <UpdateBlog></UpdateBlog>,
+        loader: () => fetch("http://localhost:5000/addBlog"),
       },
       // {
       //   element: <CommentsSection></CommentsSection>,

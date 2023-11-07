@@ -5,7 +5,7 @@
 // import { useContext, useEffect } from "react";
 // import { AuthContext } from "../providers/AuthProvider";
 
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
@@ -175,7 +175,14 @@ const BlogsDetails = () => {
             ))}
           </div>
           {user?.email === userEmail ? (
-            <div className="text-center text-5xl font-bold text-red-500">Can not comment on own blog</div>
+            <div className="my-5">
+              <h2 className="text-center text-5xl font-bold my-10 text-red-500">
+                Can not comment on own blog
+              </h2>
+              <Link to={`/updateBlog/${_id}`}>
+              <button className="btn bg-lime-500 w-full">Update</button>
+            </Link>
+            </div>
           ) : (
             <div>
               <div className="text-center">
