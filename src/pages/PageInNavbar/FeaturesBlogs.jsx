@@ -2,6 +2,7 @@ import DataTable from "react-data-table-component";
 import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
+import Footer from "../Footer";
 
 const customStyles = {
   headRow: {
@@ -77,15 +78,18 @@ const FeaturesBlogs = () => {
     },
   ];
   return (
-    <div style={{ padding: "50px 10%", backgroundColor: "gray" }}>
-      <DataTable
-        columns={column}
-        data={featuredData}
-        customStyles={customStyles}
-        pagination
-        selectableRows
-      ></DataTable>
-    </div>
+    <>
+      <div style={{ padding: "50px 10%", backgroundColor: "gray" }}>
+        <DataTable
+          columns={column}
+          data={featuredData}
+          customStyles={customStyles}
+          pagination
+          selectableRows
+        ></DataTable>
+      </div>
+      <Footer></Footer>
+    </>
   );
 };
 

@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { useState } from "react";
 import WishlistAdd from "./WishlistAdd";
+import Footer from "../Footer";
 
 const WishList = () => {
   const wishLoader = useLoaderData();
@@ -34,6 +35,7 @@ const WishList = () => {
           ))}
         </div>
       </div>
+      <Footer></Footer>
     </>
   );
 };

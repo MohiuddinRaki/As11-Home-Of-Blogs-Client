@@ -1,12 +1,8 @@
-// import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
-// import Aos from "aos";
-// import "aos/dist/aos.css";
-// import { useEffect } from "react";
 
 const AllBlog = ({ blog }) => {
   const { user } = useContext(AuthContext);
@@ -42,16 +38,9 @@ const AllBlog = ({ blog }) => {
       });
   };
 
-  //   useEffect(() => {
-  //     Aos.init();
-  //   }, []);
-
   return (
     <>
-      <div
-        className="card card-compact bg-gray-500 shadow-xl"
-        // data-aos="fade-right"
-      >
+      <div className="card card-compact bg-gray-500 shadow-xl">
         <figure>
           <img className="w-full h-72" src={imageUrl} alt={category} />
         </figure>
