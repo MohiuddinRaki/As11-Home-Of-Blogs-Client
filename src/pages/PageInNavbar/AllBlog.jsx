@@ -3,6 +3,7 @@ import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 
 const AllBlog = ({ blog }) => {
   const { user } = useContext(AuthContext);
@@ -40,7 +41,13 @@ const AllBlog = ({ blog }) => {
 
   return (
     <>
-      <div className="card card-compact bg-gray-500 shadow-xl">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0 }}
+        transition={{ duration: 1 }}
+        className="card card-compact bg-gray-500 shadow-xl"
+      >
         <figure>
           <img className="w-full h-72" src={imageUrl} alt={category} />
         </figure>
@@ -62,7 +69,7 @@ const AllBlog = ({ blog }) => {
             </Link>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import Swal from "sweetalert2";
+import { motion } from "framer-motion";
 
 const WishlistAdd = ({ wish, wishlists, setWishlists }) => {
   const { _id, category, imageUrl, shortDescription } = wish;
@@ -31,7 +32,9 @@ const WishlistAdd = ({ wish, wishlists, setWishlists }) => {
                 "Your product has been deleted.",
                 "success"
               );
-              const remaining = wishlists.filter((wishlst) => wishlst._id !== _id);
+              const remaining = wishlists.filter(
+                (wishlst) => wishlst._id !== _id
+              );
               setWishlists(remaining);
             }
           });
@@ -39,11 +42,16 @@ const WishlistAdd = ({ wish, wishlists, setWishlists }) => {
     });
   };
 
-
-
   return (
     <>
-      <div className="card bg-gray-500 shadow-xl" data-aos="fade-right">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0 }}
+        transition={{ duration: 1 }}
+        className="card bg-gray-500 shadow-xl"
+        data-aos="fade-right"
+      >
         <figure>
           <img className="h-96" src={imageUrl} alt={category} />
         </figure>
@@ -61,7 +69,7 @@ const WishlistAdd = ({ wish, wishlists, setWishlists }) => {
             </button>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 };
@@ -69,7 +77,7 @@ const WishlistAdd = ({ wish, wishlists, setWishlists }) => {
 export default WishlistAdd;
 
 WishlistAdd.propTypes = {
-    wish: PropTypes.object.isRequired,
-    wishlists: PropTypes.object.isRequired,
-    setWishlists: PropTypes.object.isRequired,
+  wish: PropTypes.object.isRequired,
+  wishlists: PropTypes.object.isRequired,
+  setWishlists: PropTypes.object.isRequired,
 };

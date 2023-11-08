@@ -8,7 +8,6 @@ import UsersFeedBack from "./UsersFeedBack";
 
 const RecentBlogs = () => {
   const recentBlog = useLoaderData();
-
   return (
     <div>
       <Banner></Banner>

@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 
 import CommentSection from "../CommentSection";
 import axios from "axios";
+import { motion } from "framer-motion";
 
 const BlogsDetails = () => {
   const blogs = useLoaderData();
@@ -75,7 +76,8 @@ const BlogsDetails = () => {
 
   const [comments, setComments] = useState([]);
   useEffect(() => {
-    axios.get("https://b8a11-server-side-mohiuddin-raki.vercel.app/userComments")
+    axios
+      .get("https://b8a11-server-side-mohiuddin-raki.vercel.app/userComments")
       .then((response) => setComments(response.data))
       // .then((result) => {
       //   setComments(result);
@@ -89,7 +91,13 @@ const BlogsDetails = () => {
   );
   return (
     <>
-      <div className="card card-compact max-w-5xl bg-gray-500 shadow-xl container mx-auto p-8 md:p-16 lg:p-0">
+      <motion.div
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0 }}
+        transition={{ duration: 1 }}
+        className="card card-compact max-w-5xl bg-gray-500 shadow-xl container mx-auto p-8 md:p-16 lg:p-0"
+      >
         <figure>
           <img className="w-full h-72" src={imageUrl} alt={category} />
         </figure>
@@ -101,7 +109,7 @@ const BlogsDetails = () => {
             <h2 className="text-lg text-sky-500">{longDescription}</h2>
           </div>
         </div>
-      </div>
+      </motion.div>
       <div className="bg-base-100 my-12 max-w-5xl mx-auto">
         <form onSubmit={handleAddComments}>
           <div className="container mx-auto p-8 md:p-16 lg:p-0">
