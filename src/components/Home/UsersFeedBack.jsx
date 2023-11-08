@@ -2,7 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
 import UserFeedBack from "./UserFeedBack";
-import axios from "axios"
+import axios from "axios";
 
 const UsersFeedBack = () => {
   const { user } = useContext(AuthContext);
@@ -61,11 +61,12 @@ const UsersFeedBack = () => {
 
   const [feedBacks, setFeedBacks] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/userFeedBacks")
+    axios
+      .get("http://localhost:5000/userFeedBacks")
       .then((response) => setFeedBacks(response.data))
-    //   .then((result) => {
-    //     setFeedBacks(result);
-    //   })
+      //   .then((result) => {
+      //     setFeedBacks(result);
+      //   })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
@@ -86,24 +87,28 @@ const UsersFeedBack = () => {
               ></UserFeedBack>
             ))}
           </div>
-          <div>
-            <div className="text-center">
-              <textarea
-                className="bg-base-300 px-5 py-3 rounded-full w-full"
-                type="text"
-                rows="1"
-                cols="80"
-                name="feedBack"
-                required
-                placeholder="Write Your FeedBack"
-              ></textarea>
+          {user?.email ? (
+            <div>
+              <div className="text-center">
+                <textarea
+                  className="bg-base-300 px-5 py-3 rounded-full w-full"
+                  type="text"
+                  rows="1"
+                  cols="80"
+                  name="feedBack"
+                  required
+                  placeholder="Write Your FeedBack"
+                ></textarea>
+              </div>
+              <input
+                type="submit"
+                value="Post"
+                className="btn btn-block bg-lime-500"
+              />
             </div>
-            <input
-              type="submit"
-              value="Post"
-              className="btn btn-block bg-lime-500"
-            />
-          </div>
+          ) : (
+            " "
+          )}
         </form>
       </div>
     </div>

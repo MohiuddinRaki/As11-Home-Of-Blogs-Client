@@ -1,8 +1,5 @@
 import PropTypes from "prop-types";
-// import { useEffect } from "react";
 import Swal from "sweetalert2";
-// import Aos from "aos";
-// import "aos/dist/aos.css";
 
 const WishlistAdd = ({ wish, wishlists, setWishlists }) => {
   const { _id, category, imageUrl, shortDescription } = wish;
@@ -42,9 +39,7 @@ const WishlistAdd = ({ wish, wishlists, setWishlists }) => {
     });
   };
 
-//   useEffect(() => {
-//     Aos.init();
-//   }, []);
+
 
   return (
     <>

@@ -27,7 +27,7 @@ const AllBlogs = () => {
             <div>
               <form onChange={handleSearchCaetegory}>
                 <select type="text" className="input input-bordered">
-                  <option value={recentBlog}>all</option>
+                  <option value={recentBlog}>All</option>
                   <option value="Travel">Travel</option>
                   <option value="Health & Wellness">Health & Wellness</option>
                   <option value="Food & Cooking">Food & Cooking</option>

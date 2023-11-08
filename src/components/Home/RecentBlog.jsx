@@ -28,12 +28,16 @@ const RecentBlog = ({ blog }) => {
       .then((data) => {
         console.log(data);
         if (data.insertedId) {
-          Swal.fire({
-            title: "Success!",
-            text: "Blog Added to Wishlist Successfully",
-            icon: "success",
-            confirmButtonText: "Cool",
-          });
+          {
+            user?.email
+              ? Swal.fire({
+                  title: "Success!",
+                  text: "Blog Added to Wishlist Successfully",
+                  icon: "success",
+                  confirmButtonText: "Cool",
+                })
+              : " ";
+          }
         }
       });
   };
@@ -54,12 +58,22 @@ const RecentBlog = ({ blog }) => {
             <Link to={`/blogDetails/${_id}`} className="btn btn-success">
               Details
             </Link>
-            <Link
-              onClick={() => handleAddWishlist(blog)}
-              className="btn btn-accent"
-            >
-              Add Wishlist
-            </Link>
+            {user?.email ? (
+              <Link
+                onClick={() => handleAddWishlist(blog)}
+                className="btn btn-accent"
+              >
+                Add Wishlist
+              </Link>
+            ) : (
+              <Link
+                to="/login"
+                onClick={() => handleAddWishlist(blog)}
+                className="btn btn-accent"
+              >
+                Add Wishlist
+              </Link>
+            )}
           </div>
         </div>
       </div>
