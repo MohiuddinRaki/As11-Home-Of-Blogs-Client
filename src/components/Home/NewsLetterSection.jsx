@@ -50,7 +50,7 @@ const NewsLetterSection = () => {
   return (
     <div>
       <div className="bg-[#F4F3F0] p-24 my-12">
-        <h2 className="text-center text-6xl font-bold mb-10">
+        <h2 className="text-5xl font-bold text-lime-500 text-center mt-20 mb-10">
           Please SubsCribe
         </h2>
         <form onSubmit={handleSubsCribe}>
@@ -69,7 +69,7 @@ const NewsLetterSection = () => {
           <input
             type="submit"
             value="Subscribe"
-            className="btn btn-block text-white bg-black mt-8"
+            className="btn btn-block bg-lime-500 mt-8"
           />
         </form>
       </div>

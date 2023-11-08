@@ -49,9 +49,9 @@ const UsersFeedBack = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "Blog Added Successfully",
+            text: "Thanks For Your FeedBack",
             icon: "success",
-            confirmButtonText: "Cool",
+            confirmButtonText: "Ok",
           });
         }
         event.target.reset();
