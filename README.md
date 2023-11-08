@@ -1,8 +1,30 @@
-# React + Vite
+# Home Of Blogs
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Click here for the live link:
 
-Currently, two official plugins are available:
+[https://65381957daa56702c0b268cf--poetic-lebkuchen-72add5.netlify.app]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Features
+
+### Features 1: Navbar
+
+- Displays navbar in conatinig avatar part.
+- In avatar part containing Image, name and logout button.
+
+### Features 2: Dashboard
+
+- Displays Blogs-specific data and statistics.
+- Each Blogs cart has image, category, title, short description.
+
+### Features 3: Details
+
+- Display single blog details page.
+- creat and display Comments section and Update button in that details page.
+
+### Features 4: Register
+
+Displays register page with validation.
+
+### Features 5: Login
+
+- Displays login page with validation.

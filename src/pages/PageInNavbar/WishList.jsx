@@ -14,7 +14,7 @@ const WishList = () => {
         <figure>
           <img
             className="rounded-2xl"
-            src="https://i.ibb.co/VqRf6Pb/5639809.webp"
+            src="https://i.ibb.co/R7VxGBS/holiday-decorations-notebook-wishlist-rustic-wooden-table-gift-boxes-fir-branch-sprinkled-snow-top-v.webp"
           />
         </figure>
       </div>
