@@ -44,13 +44,16 @@ const UpdateBlog = () => {
     console.log(updateBlog);
 
     //  send data to the server:
-    fetch(`http://localhost:5000/addBlog/${_id}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(updateBlog),
-    })
+    fetch(
+      `https://b8a11-server-side-mohiuddin-raki.vercel.app/addBlog/${_id}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(updateBlog),
+      }
+    )
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -79,14 +82,6 @@ const UpdateBlog = () => {
                 </span>
               </label>
               <label className="input-group">
-                {/* <input
-                  type="text"
-                  name="category"
-                  placeholder="Category"
-                  defaultValue={blogs.category}
-                  required
-                  className="input input-bordered w-full"
-                /> */}
                 <select
                   type="text"
                   name="category"
@@ -127,19 +122,6 @@ const UpdateBlog = () => {
                   <option value="Lifestyle Hacks">Lifestyle Hacks</option>
                 </select>
               </label>
-              {/* <select
-                type="text"
-                name="category"
-                placeholder="Category"
-                defaultValue={blogs.category}
-                required
-                className="input input-bordered w-full"
-              >
-                <option value="5">5</option>
-                <option value="10">10</option>
-                <option value="20">20</option>
-                <option value="50">50</option>
-              </select> */}
             </div>
             <div className="form-control w-1/2">
               <label className="label">

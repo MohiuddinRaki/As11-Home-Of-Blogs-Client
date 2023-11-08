@@ -25,7 +25,7 @@ const NewsLetterSection = () => {
     console.log(newSubscribingEmail);
 
     //  send data to the server:
-    fetch("http://localhost:5000/subscribing", {
+    fetch("https://b8a11-server-side-mohiuddin-raki.vercel.app/subscribing", {
       method: "POST",
       headers: {
         "content-type": "application/json",

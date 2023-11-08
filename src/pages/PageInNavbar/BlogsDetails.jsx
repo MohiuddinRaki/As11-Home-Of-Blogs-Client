@@ -51,7 +51,7 @@ const BlogsDetails = () => {
     console.log(newUserComments);
 
     //  send data to the server:
-    fetch("http://localhost:5000/userComments", {
+    fetch("https://b8a11-server-side-mohiuddin-raki.vercel.app/userComments", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -75,7 +75,7 @@ const BlogsDetails = () => {
 
   const [comments, setComments] = useState([]);
   useEffect(() => {
-    axios.get("http://localhost:5000/userComments")
+    axios.get("https://b8a11-server-side-mohiuddin-raki.vercel.app/userComments")
       .then((response) => setComments(response.data))
       // .then((result) => {
       //   setComments(result);

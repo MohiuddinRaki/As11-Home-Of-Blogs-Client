@@ -43,7 +43,7 @@ const AddBlog = () => {
     console.log(newAddBlog);
 
     //  send data to the server:
-    fetch("http://localhost:5000/addBlog", {
+    fetch("https://b8a11-server-side-mohiuddin-raki.vercel.app/addBlog", {
       method: "POST",
       headers: {
         "content-type": "application/json",

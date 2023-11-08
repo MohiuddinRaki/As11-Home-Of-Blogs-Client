@@ -21,7 +21,8 @@ const Routes = createBrowserRouter([
       {
         path: "/",
         element: <RecentBlogs></RecentBlogs>,
-        loader: () => fetch("http://localhost:5000/addBlog"),
+        loader: () =>
+          fetch("https://b8a11-server-side-mohiuddin-raki.vercel.app/addBlog"),
       },
       {
         path: "/allBlogs",
@@ -30,7 +31,8 @@ const Routes = createBrowserRouter([
             <AllBlogs></AllBlogs>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/addBlog"),
+        loader: () =>
+          fetch("https://b8a11-server-side-mohiuddin-raki.vercel.app/addBlog"),
       },
       {
         path: "/featuredBlogs",
@@ -39,12 +41,13 @@ const Routes = createBrowserRouter([
             <FeaturesBlogs></FeaturesBlogs>
           </PrivateRoute>
         ),
-        // loader: () => fetch("http://localhost:5000/addBlog"),
       },
       {
         path: "/blogDetails/:_id",
         loader: ({ params }) =>
-          fetch(`http://localhost:5000/addBlog/${params._id}`),
+          fetch(
+            `https://b8a11-server-side-mohiuddin-raki.vercel.app/addBlog/${params._id}`
+          ),
         element: (
           <PrivateRoute>
             <BlogsDetails></BlogsDetails>
@@ -58,7 +61,8 @@ const Routes = createBrowserRouter([
             <UpdateBlog></UpdateBlog>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/addBlog"),
+        loader: () =>
+          fetch("https://b8a11-server-side-mohiuddin-raki.vercel.app/addBlog"),
       },
 
       {
@@ -72,7 +76,8 @@ const Routes = createBrowserRouter([
 
       {
         path: "/wishlist/:email",
-        loader: () => fetch("http://localhost:5000/wishlist"),
+        loader: () =>
+          fetch("https://b8a11-server-side-mohiuddin-raki.vercel.app/wishlist"),
         element: (
           <PrivateRoute>
             <WishList></WishList>

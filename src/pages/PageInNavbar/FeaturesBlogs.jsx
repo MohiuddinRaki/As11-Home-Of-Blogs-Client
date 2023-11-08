@@ -30,7 +30,7 @@ const FeaturesBlogs = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/addBlog")
+      .get("https://b8a11-server-side-mohiuddin-raki.vercel.app/addBlog")
       .then((response) => {
         const featured = response.data;
 

@@ -17,7 +17,7 @@ const AllBlog = ({ blog }) => {
     const newWishlist = { title, category, imageUrl, shortDescription, email };
 
     //  send data to the server:
-    fetch("http://localhost:5000/wishlist", {
+    fetch("https://b8a11-server-side-mohiuddin-raki.vercel.app/wishlist", {
       method: "POST",
       headers: {
         "content-type": "application/json",

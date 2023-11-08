@@ -37,7 +37,7 @@ const UsersFeedBack = () => {
     console.log(newUserFeedBacks);
 
     //  send data to the server:
-    fetch("http://localhost:5000/userFeedBacks", {
+    fetch("https://b8a11-server-side-mohiuddin-raki.vercel.app/userFeedBacks", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -62,7 +62,7 @@ const UsersFeedBack = () => {
   const [feedBacks, setFeedBacks] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/userFeedBacks")
+      .get("https://b8a11-server-side-mohiuddin-raki.vercel.app/userFeedBacks")
       .then((response) => setFeedBacks(response.data))
       //   .then((result) => {
       //     setFeedBacks(result);

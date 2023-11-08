@@ -17,7 +17,7 @@ const WishlistAdd = ({ wish, wishlists, setWishlists }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         fetch(
-          `http://localhost:5000/wishlist/${_id}`,
+          `https://b8a11-server-side-mohiuddin-raki.vercel.app/wishlist/${_id}`,
           {
             method: "DELETE",
           }

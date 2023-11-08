@@ -2,7 +2,6 @@ import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
-// import DarkMode from "../components/DarkMode";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
@@ -28,9 +27,6 @@ const Navbar = () => {
       <li className="text-lg font-medium text-white">
         <NavLink to="/login">Login</NavLink>
       </li>
-      {/* <li className="text-lg font-medium text-white">
-        <DarkMode></DarkMode>
-      </li> */}
     </>
   );
 
