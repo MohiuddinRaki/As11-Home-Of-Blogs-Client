@@ -39,7 +39,7 @@ const Routes = createBrowserRouter([
             <FeaturesBlogs></FeaturesBlogs>
           </PrivateRoute>
         ),
-        loader: () => fetch("http://localhost:5000/addBlog"),
+        // loader: () => fetch("http://localhost:5000/addBlog"),
       },
       {
         path: "/blogDetails/:_id",
