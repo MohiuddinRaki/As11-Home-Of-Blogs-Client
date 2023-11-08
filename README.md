@@ -1,12 +1,8 @@
 # Home Of Blogs
 
-## Click here for the live link:
+## Click here for the live link: 
+[https://654bc31785c76616e0626608--statuesque-crepe-6c7821.netlify.app]
 
-<<<<<<< HEAD
-[https://654bad5be21aac698acb400b--statuesque-crepe-6c7821.netlify.app]
-=======
-[[https://65381957daa56702c0b268cf--poetic-lebkuchen-72add5.netlify.app](https://654bad5be21aac698acb400b--statuesque-crepe-6c7821.netlify.app)]
->>>>>>> f466b920f445fbeb41e1443e766fc222f80a3ad9
 
 ## Project Features
 
