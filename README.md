@@ -1,6 +1,6 @@
 # Home Of Blogs
 
-## Click here for the live link: 
+## Click here for the live link:
 [https://654bc31785c76616e0626608--statuesque-crepe-6c7821.netlify.app]
 
 
