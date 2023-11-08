@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProvider";
 import UserFeedBack from "./UserFeedBack";
+import axios from "axios"
 
 const UsersFeedBack = () => {
   const { user } = useContext(AuthContext);
@@ -60,11 +61,11 @@ const UsersFeedBack = () => {
 
   const [feedBacks, setFeedBacks] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/userFeedBacks")
-      .then((response) => response.json())
-      .then((result) => {
-        setFeedBacks(result);
-      })
+    axios.get("http://localhost:5000/userFeedBacks")
+      .then((response) => setFeedBacks(response.data))
+    //   .then((result) => {
+    //     setFeedBacks(result);
+    //   })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });

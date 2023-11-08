@@ -4,6 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 
 import CommentSection from "../CommentSection";
+import axios from "axios";
 
 const BlogsDetails = () => {
   const blogs = useLoaderData();
@@ -63,7 +64,7 @@ const BlogsDetails = () => {
         if (data.insertedId) {
           Swal.fire({
             title: "Success!",
-            text: "Blog Added Successfully",
+            text: "Comment Added Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
@@ -74,11 +75,11 @@ const BlogsDetails = () => {
 
   const [comments, setComments] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/userComments")
-      .then((response) => response.json())
-      .then((result) => {
-        setComments(result);
-      })
+    axios.get("http://localhost:5000/userComments")
+      .then((response) => setComments(response.data))
+      // .then((result) => {
+      //   setComments(result);
+      // })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });

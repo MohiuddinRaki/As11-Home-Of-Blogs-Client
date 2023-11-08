@@ -11,14 +11,6 @@ import WishList from "../pages/PageInNavbar/WishList";
 import AllBlogs from "../pages/PageInNavbar/AllBlogs";
 import UpdateBlog from "../pages/UpdateBlog";
 import FeaturesBlogs from "../pages/PageInNavbar/FeaturesBlogs";
-// import CommentsSection from "../pages/CommentsSection";
-// import UpdateProduct from "../components/UpdateProduct";
-// import MyCart from "../components/MyCart";
-// import BrandCards from "../components/BrandCards";
-// import BrandProducts from "../components/BrandProducts";
-// import BrandUnic from "../components/BrandUnic";
-// import ProductsDetails from "../components/ProductsDetails";
-// import Team from "../components/Team";
 
 const Routes = createBrowserRouter([
   {
@@ -33,12 +25,20 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/allBlogs",
-        element: <AllBlogs></AllBlogs>,
+        element: (
+          <PrivateRoute>
+            <AllBlogs></AllBlogs>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/addBlog"),
       },
       {
         path: "/featuredBlogs",
-        element: <FeaturesBlogs></FeaturesBlogs>,
+        element: (
+          <PrivateRoute>
+            <FeaturesBlogs></FeaturesBlogs>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/addBlog"),
       },
       {
@@ -53,13 +53,13 @@ const Routes = createBrowserRouter([
       },
       {
         path: "/updateBlog/:_id",
-        element: <UpdateBlog></UpdateBlog>,
+        element: (
+          <PrivateRoute>
+            <UpdateBlog></UpdateBlog>
+          </PrivateRoute>
+        ),
         loader: () => fetch("http://localhost:5000/addBlog"),
       },
-      // {
-      //   element: <CommentsSection></CommentsSection>,
-      //   loader: () => fetch("http://localhost:5000/userComments"),
-      // },
 
       {
         path: "/addBlog",

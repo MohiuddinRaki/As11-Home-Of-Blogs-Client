@@ -24,8 +24,6 @@ const customStyles = {
 
 const FeaturesBlogs = () => {
   const featuredLoader = useLoaderData();
-//   const featuredLongDes = featuredLoader.filter()
-//   const featuredunic = featuredLongDes < 11
   const column = [
     {
       name: "Serial",

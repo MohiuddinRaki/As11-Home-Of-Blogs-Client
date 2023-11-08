@@ -1,15 +1,10 @@
 import { useLoaderData } from "react-router-dom";
-// import Banner from "./Banner";
-// import FeedBack from "./FeedBack";
-// import BrandCard from "./BrandCard";
 import RecentBlog from "./RecentBlog";
 import Footer from "../../pages/Footer";
 import NewsLetterSection from "./NewsLetterSection";
 import Banner from "./Banner";
 import GoogleMap from "./GoogleMap";
 import UsersFeedBack from "./UsersFeedBack";
-// import GoogleMap from "./GoogleMap";
-// import Team from "./Team";
 
 const RecentBlogs = () => {
   const recentBlog = useLoaderData();
@@ -27,9 +22,6 @@ const RecentBlogs = () => {
           ))}
         </div>
       </div>
-      {/* <FeedBack></FeedBack>
-      <Team></Team>
-      <GoogleMap></GoogleMap> */}
       <NewsLetterSection></NewsLetterSection>
       <UsersFeedBack></UsersFeedBack>
       <GoogleMap></GoogleMap>
