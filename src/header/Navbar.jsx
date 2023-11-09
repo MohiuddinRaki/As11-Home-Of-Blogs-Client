@@ -1,32 +1,31 @@
 import { useContext } from "react";
 import { AuthContext } from "../providers/AuthProvider";
 import { Link, NavLink } from "react-router-dom";
-import "./Navbar.css";
+import "./navbar.css";
 
 const Navbar = () => {
   const { user, logOutUser } = useContext(AuthContext);
 
   const navLinks = (
     <>
-      <li></li>
-      <li className="text-lg font-medium text-white">
+      <li className="text-lg font-medium text-teal-500 lg:text-white">
         <NavLink to="/">Home</NavLink>
       </li>
-      <li className="text-lg font-medium text-white">
+      <li className="text-lg font-medium text-teal-500 lg:text-white">
         <NavLink to="/addBlog">Add Blog</NavLink>
       </li>
-      <li className="text-lg font-medium text-white">
+      <li className="text-lg font-medium text-teal-500 lg:text-white">
         <NavLink to="/allBlogs">All Blogs</NavLink>
       </li>
-      <li className="text-lg font-medium text-white">
-        <NavLink to="/featuredBlogs">Featured Blogs</NavLink>
+      <li className="text-lg font-medium text-teal-500 lg:text-white">
+        <NavLink to="/featuredBlogs">Featured</NavLink>
       </li>
-      <li className="text-lg font-medium text-white">
+      <li className="text-lg font-medium text-teal-500 lg:text-white">
         <NavLink to={`/wishlist/${user?.email}`}>Wishlist</NavLink>
       </li>
-      <li className="text-lg font-medium text-white">
+      {/* <li className="text-lg font-medium text-teal-500 lg:text-white">
         <NavLink to="/login">Login</NavLink>
-      </li>
+      </li> */}
     </>
   );
 
@@ -53,13 +52,13 @@ const Navbar = () => {
 
           <Link
             to="/"
-            className="btn btn-ghost normal-case text-teal-500 font-bold text-4xl pl-12 md:pl-44 lg:pl-0"
+            className="btn btn-ghost normal-case text-teal-500 font-bold text-lg md:text-4xl pl-16 md:pl-44 lg:pl-0"
           >
             Home Of Blogs
           </Link>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu-horizontal px-1 gap-5">{navLinks}</ul>
+        <div className="mr-5 xl:navbar-center hidden lg:flex">
+          <ul className="menu-horizontal gap-5">{navLinks}</ul>
         </div>
 
         <div className="navbar-end">

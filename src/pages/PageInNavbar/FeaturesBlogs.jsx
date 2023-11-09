@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import axios from "axios";
 import { useState } from "react";
 import Footer from "../Footer";
+// import "./featured.css";
 
 const customStyles = {
   headRow: {
@@ -79,15 +80,22 @@ const FeaturesBlogs = () => {
   ];
   return (
     <>
-      <div style={{ padding: "50px 10%", backgroundColor: "gray" }}>
-        <DataTable
-          columns={column}
-          data={featuredData}
-          customStyles={customStyles}
-          pagination
-          selectableRows
-        ></DataTable>
-      </div>
+      <section>
+        <div
+          className="container mx-auto"
+          style={{ padding: "md:50px md:10%", backgroundColor: "gray" }}
+        >
+          <DataTable
+            columns={column}
+            data={featuredData}
+            customStyles={customStyles}
+            pagination
+            selectableRows
+            responsive
+          ></DataTable>
+        </div>
+      </section>
+
       <Footer></Footer>
     </>
   );

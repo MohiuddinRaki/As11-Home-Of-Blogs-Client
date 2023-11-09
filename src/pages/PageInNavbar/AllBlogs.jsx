@@ -23,7 +23,7 @@ const AllBlogs = () => {
     <>
       <div>
         <div>
-          <div className=" my-5 flex justify-center gap-5">
+          <div className="container mx-auto my-5 flex flex-col md:flex-row items-center md:justify-center gap-5">
             <div>
               <form onChange={handleSearchCaetegory}>
                 <select type="text" className="input input-bordered">

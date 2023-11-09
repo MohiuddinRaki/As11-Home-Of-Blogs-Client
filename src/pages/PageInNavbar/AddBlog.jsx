@@ -68,7 +68,7 @@ const AddBlog = () => {
   return (
     <>
       <div className="bg-[#F4F3F0] p-24 my-12">
-        <h2 className="text-center text-6xl font-bold mb-10">Add Blog</h2>
+        <h2 className="text-center text-6xl font-bold mb-10 text-lime-500">Add Blog</h2>
         <form onSubmit={handleAddBlog}>
           <div className="flex gap-6">
             <div className="form-control w-1/2">
@@ -184,7 +184,7 @@ const AddBlog = () => {
           <input
             type="submit"
             value="Add Blog"
-            className="btn btn-block text-white bg-black mt-8"
+            className="btn btn-block text-white bg-lime-500 mt-8"
           />
         </form>
       </div>

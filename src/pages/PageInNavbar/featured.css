@@ -1,0 +1,19 @@
+/* @media (max-width: 768px) {
+    .rdt_Table {
+      display: block;
+    }
+    .rdt_TableBody {
+      display: block;
+      max-height: 400px; 
+      overflow-y: auto; 
+    }
+    .rdt_TableRow {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+    .rdt_TableCell {
+      display: flex;
+      flex-direction: column;
+    }
+  } */
